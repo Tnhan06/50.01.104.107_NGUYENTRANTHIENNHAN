@@ -1,0 +1,29 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+.float-left {
+    width: 45%;
+    float: left;
+    margin-right: 5%;
+    background-color: lightblue;
+    padding: 15px;
+}
+.float-right {
+    width: 45%;
+    float: right;
+    margin-left: 5%;
+    background-color: rgb(175, 183, 53);
+    padding: 15px;
+}
+.centered {
+    text-align: center;
+    background-color: rgb(210, 88, 180);
+    padding: 15px;
+    clear: both;
+}
+.clear {
+    clear: both;
+}

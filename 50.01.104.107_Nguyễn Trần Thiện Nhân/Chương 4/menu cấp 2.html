@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Menu Toggle</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .menu_container {
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background-color: #96eee800;
+            overflow-y: auto;
+            padding: 10px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu_theloai {
+            display: block;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 5px;
+            background-color: #1860a8;
+            border: 2px solid #000000;
+            border-radius: 3px;
+            margin: 5px 0;
+            text-align: left;
+        }
+
+        .menu_nhom a {
+            display: block;
+            text-decoration: none;
+            color: #0426474a;
+            padding: 5px;
+            background-color: #3b404646;
+            border: 1px solid #08213cb3;
+            border-radius: 3px;
+            margin: 3px 0;
+            text-align: left;
+        }
+
+        .menu_nhom {
+            display: none;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu_container">
+        <div class="menu_theloai">Đời sống</div>
+        <div class="menu_nhom">
+            <a href="?idTL=15">Hoa hậu</a>
+            <a href="?idTL=16">Nghệ sĩ</a>
+            <a href="?idTL=17">Mỹ thuật</a>
+        </div>
+        <div class="menu_theloai">Giải trí</div>
+        <div class="menu_nhom">
+            <a href="?idTL=18">Âm nhạc</a>
+            <a href="?idTL=19">Thời trang</a>
+            <a href="?idTL=20">Điện ảnh</a>
+        </div>
+        <div class="menu_theloai">Thể thao</div>
+        <div class="menu_nhom">
+            <a href="?idTL=21">Bóng đá</a>
+            <a href="?idTL=22">Tennis</a>
+            <a href="?idTL=23">Các môn khác</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuTheLoai = document.querySelectorAll(".menu_theloai");
+
+            menuTheLoai.forEach(menu => {
+                menu.addEventListener("click", function () {
+                    const menuNhom = this.nextElementSibling;
+
+                    if (menuNhom.style.display === "block") {
+                        menuNhom.style.display = "none";
+                    } else {
+                        menuNhom.style.display = "block";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
